@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function myFunction() {
+				var myVariable = document.querySelector('h1');
+				myVariable.innerHTML = "hoho";
+			}
+
+			function multiply(num1, num2) {
+				var result = num1 * num2;
+				return result;
+			}
+			//html页面响应事件。onclick鼠标点击事件。
+			/*我们有许多方法来将一个事件与元素绑定。在这里我们选择了 HTML 
+			元素然后将 onclick 属性设置成包含单击时我们想要运行的代码的匿名函数。*/
+			//			document.querySelector('html').onclick = function() {
+			//				//var myHTML = document.querySelector('html');
+			//				//myHTML.onclick = function() {};
+			//				alert('Ouch! Stop poking me!');
+			//			}
+			var myImage = document.querySelector('img');
+			myImage.onclick = function() {
+				var mySrc = myImage.getAttribute('src');
+				if (mySrc === 'img/small01.jpg') {
+					myImage.setAttribute('src', 'img/small02.jpg');
+				} else {
+					myImage.setAttribute('src', 'img/small02.png');
+				}
+			}
+			var myButton = document.querySelector('button');
+			var myHeading = document.querySelector('h1');
+
+			function setUserName() {
+				var myName = prompt('Please enter your name.');
+				localStorage.setItem('name', myName);
+				myHeading.innerHTML = 'Mozilla is cool, ' + myName;
+			}
+		</script>
+	</head>
+
+	<body>
+		<h1>哈哈</h1>
+
+		<button onclick="myFunction()">点击我</button><br />
+		<img src="img/small01.jpg" /><br />
+		<button>Change user</button>
+
+	</body>
+
+</html>

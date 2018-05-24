@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+
+		<p>每个表格由 table 标签开始。</p>
+		<p>每个表格行由 tr 标签开始。</p>
+		<p>每个表格数据由 td 标签开始。</p>
+		<h4>一列：</h4>
+		<table border="1">
+			<!-- border="1"为边框的宽度  ，border="0"或者没有这个参数：就是无边框，       -->
+			<tr>
+				<td>100</td>
+			</tr>
+		</table>
+		<h4>一行三列：</h4>
+		<table border="1">
+			<tr>
+				<td>100</td>
+				<td>200</td>
+				<td>300</td>
+			</tr>
+		</table>
+		<h4>两行三列：</h4>
+		<table border="1">
+			<tr>
+				<td>100</td>
+				<td>200</td>
+				<td>300</td>
+			</tr>
+			<tr>
+				<td>400</td>
+				<td>500</td>
+				<td>600</td>
+			</tr>
+		</table>
+		<h4>带有普通的边框：</h4>
+		<table border="1">
+			<tr>
+				<td>First</td>
+				<td>Row</td>
+			</tr>
+			<tr>
+				<td>Second</td>
+				<td>Row</td>
+			</tr>
+		</table>
+
+		<h4>带有粗的边框：</h4>
+		<table border="8">
+			<tr>
+				<td>First</td>
+				<td>Row</td>
+			</tr>
+			<tr>
+				<td>Second</td>
+				<td>Row</td>
+			</tr>
+		</table>
+
+		<h4>带有很粗的边框：</h4>
+		<table border="15">
+			<tr>
+				<td>First</td>
+				<td>Row</td>
+			</tr>
+			<tr>
+				<td>Second</td>
+				<td>Row</td>
+			</tr>
+		</table>
+		<h4>这个表格没有边框：</h4>
+		<table>
+			<tr>
+				<td>100</td>
+				<td>200</td>
+				<td>300</td>
+			</tr>
+			<tr>
+				<td>400</td>
+				<td>500</td>
+				<td>600</td>
+			</tr>
+		</table>
+
+		<h4>这个表格也没有边框：</h4>
+		<table border="0">
+			<tr>
+				<td>100</td>
+				<td>200</td>
+				<td>300</td>
+			</tr>
+			<tr>
+				<td>400</td>
+				<td>500</td>
+				<td>600</td>
+			</tr>
+		</table>
+		<h4>表头：</h4>
+		<table border="1">
+			<tr>
+				<th>姓名</th>
+				<th>电话</th>
+				<th>电话</th>
+			</tr>
+			<tr>
+				<td>Bill Gates</td>
+				<td>555 77 854</td>
+				<td>555 77 855</td>
+			</tr>
+		</table>
+
+		<h4>垂直的表头：</h4>
+		<table border="1">
+			<tr>
+				<th>姓名</th>
+				<td>Bill Gates</td>
+			</tr>
+			<tr>
+				<th>电话</th>
+				<td>555 77 854</td>
+			</tr>
+			<tr>
+				<th>电话</th>
+				<td>555 77 855</td>
+			</tr>
+		</table>
+		<h4>表格中有空的单元</h4>
+		<table border="1">
+			<caption>我的表格的标题</caption>
+			<tr>
+				<td>Some text</td>
+				<td>Some text</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Some text</td>
+			</tr>
+		</table>
+
+		<p>正如您看到的，其中一个单元没有边框。这是因为它是空的。在该单元中插入一个空格后，仍然没有边框。</p>
+
+		<p>我们的技巧是在单元中插入一个 no-breaking 空格。</p>
+
+		<p>no-breaking 空格是一个字符实体。如果您不清楚什么是字符实体，请阅读关于字符实体的章节。</p>
+
+		<p>no-breaking 空格由和号开始 ("&")，然后是字符"nbsp"，并以分号结尾(";")。</p>
+		<h4>横跨两列colspan的单元格：</h4>
+		<table border="1">
+			<tr>
+				<th>姓名</th>
+				<th colspan="2">电话</th>
+			</tr>
+			<tr>
+				<td>Bill Gates</td>
+				<td>555 77 854</td>
+				<td>555 77 855</td>
+			</tr>
+		</table>
+
+		<h4>横跨两行rowspan的单元格：</h4>
+		<table border="1">
+			<tr>
+				<th>姓名</th>
+				<td>Bill Gates</td>
+			</tr>
+			<tr>
+				<th rowspan="2">电话</th>
+				<td>555 77 854</td>
+			</tr>
+			<tr>
+				<td>555 77 855</td>
+			</tr>
+		</table>
+		<h4>表格内的标签 td为行，tr为列</h4>
+		<table border="1">
+			<tr>
+				<td>
+					<p>这是一个段落。</p>
+					<p>这是另一个段落。</p>
+				</td>
+				<td>这个单元包含一个表格：
+					<table border="1">
+						<tr>
+							<td>A</td>
+							<td>B</td>
+						</tr>
+						<tr>
+							<td>C</td>
+							<td>D</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>这个单元包含一个列表：
+					<ul>
+						<li>苹果</li>
+						<li>香蕉</li>
+						<li>菠萝</li>
+					</ul>
+				</td>
+				<td>HELLO</td>
+			</tr>
+		</table>
+		<h4>没有 cellpadding：</h4>
+		<table border="1">
+			<tr>
+				<td>First</td>
+				<td>Row</td>
+			</tr>
+			<tr>
+				<td>Second</td>
+				<td>Row</td>
+			</tr>
+		</table>
+
+		<h4> Cell padding 来创建单元格内容与其边框之间的空白。带有 cellpadding：</h4>
+		<table border="1" cellpadding="10">
+			<tr>
+				<td>First</td>
+				<td>Row</td>
+			</tr>
+			<tr>
+				<td>Second</td>
+				<td>Row</td>
+			</tr>
+		</table>
+		<h4>没有 cellspacing：</h4>
+		<table border="1">
+			<tr>
+				<td>First</td>
+				<td>Row</td>
+			</tr>
+			<tr>
+				<td>Second</td>
+				<td>Row</td>
+			</tr>
+		</table>
+
+		<h4>带有 cellspacing：</h4>
+		<table border="1" cellspacing="10">
+			<tr>
+				<td>First</td>
+				<td>Row</td>
+			</tr>
+			<tr>
+				<td>Second</td>
+				<td>Row</td>
+			</tr>
+		</table>
+
+		<h4>给表格或者表格单元加背景颜色：</h4>
+		<table border="1" bgcolor="red">
+			<tr>
+				<td bgcolor="yellow">First</td>
+				<td background="img/yanzhengma.png">Row</td>
+			</tr>
+			<tr>
+				<td>Second</td>
+				<td>Row</td>
+			</tr>
+		</table>
+
+		<h4>背景图像：</h4>
+		<table border="1" background="img/logo2.png">
+			<tr>
+				<td>First</td>
+				<td>Row</td>
+			</tr>
+			<tr>
+				<td>Second</td>
+				<td>Row</td>
+			</tr>
+		</table>
+		<h4>使用 "align" 属性排列单元格内容,left靠左；middle居中，right：靠右</h4>
+		<table width="400" border="1">
+			<tr>
+				<th>消费项目....</th>
+				<th align="middle">一月</th>
+				<th align="right">二月</th>
+			</tr>
+			<tr>
+				<td>衣服</td>
+				<td align="right">$241.10</td>
+				<td align="right">$50.20</td>
+			</tr>
+			<tr>
+				<td align="left">化妆品</td>
+				<td align="right">$30.00</td>
+				<td align="right">$44.45</td>
+			</tr>
+		</table>
+		<p>定义和用法 定义表格内的表头单元格。 HTML 表单中有两种类型的单元格： 表头单元格 - 包含表头信息（由 th 元素创建） 标准单元格 - 包含数据 （由 td 元素创建） th 元素内部的文本通常会呈现为居中的粗体文本， 而 td 元素内的文本通常是左对齐的普通文本。</p>
+		<table border="1">
+			<tr>
+				<th>Company</th>
+				<th>Address</th>
+			</tr>
+
+			<tr>
+				<td>Apple, Inc.</td>
+				<td>1 Infinite Loop Cupertino, CA 95014</td>
+			</tr>
+		</table>
+		<h4></h4>
+		<table border="1">
+			<tr>
+				<td>一个无序列表：
+					<ul>
+						<li>咖啡</li>
+						<li>茶</li>
+						<li>牛奶</li>
+					</ul>
+				</td>
+				<td>一个无序列表：start无值就是默认1开始
+					<ol start="50">
+						<li>咖啡</li>
+						<li>牛奶</li>
+						<li>茶</li>
+					</ol>
+				</td>
+				<td>Disc 项目符号列表；Circle 项目符号列表：Square 项目符号列表：
+					<ul type="disc">
+						<li>苹果</li>
+						<li>香蕉</li>
+						<li>柠檬</li>
+						<li>桔子</li>
+					</ul>
+				</td>
+				<td>默认是数字顺序列表
+					<ol>
+						<li>苹果</li>
+						<li>香蕉</li>
+						<li>柠檬</li>
+						<li>桔子</li>
+					</ol>
+
+				</td>
+				<td>A:字母列表;a;小写字母；I罗马字母
+					<ol type="A">
+						<li>苹果</li>
+						<li>香蕉</li>
+						<li>柠檬</li>
+						<li>桔子</li>
+					</ol>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<h4>一个嵌套列表：</h4>
+					<ul>
+						<li>咖啡</li>
+						<li>茶
+							<ul>
+								<li>红茶</li>
+								<li>绿茶</li>
+							</ul>
+						</li>
+						<li>牛奶</li>
+					</ul>
+				</td>
+				<td>
+					<ul>
+						<li>咖啡</li>
+						<li>茶
+							<ul>
+								<li>红茶</li>
+								<li>绿茶
+									<ul>
+										<li>中国茶</li>
+										<li>非洲茶</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>牛奶</li>
+					</ul>
+
+				</td>
+			</tr>
+		</table>
+
+	</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<h4>HTML 事件的例子：</h4>
+		<ul>
+			<li>当用户点击鼠标时</li>
+			<li>当网页已加载时</li>
+			<li>当图像已加载时</li>
+			<li>当鼠标移动到元素上时</li>
+			<li>当输入字段被改变时</li>
+			<li>当提交 HTML 表单时</li>
+			<li>当用户触发按键时</li>
+		</ul>
+		<h1 onclick="this.innerHTML='谢谢!'">请点击该文本</h1>
+		<h1 id="h1" onclick="document.getElementById('h1').style.color='purple'">请点击</h1>
+	</body>
+	<h1 id="id11">My Heading 1</h1>
+	<button type="button" onclick="document.getElementById('id11').
+		style.color='red'">
+	点击这里！</button>
+
+	<h4>使用 HTML DOM 来分配事件
+	HTML DOM 允许您通过使用 JavaScript 来向 HTML 元素分配事件：</h4>
+	<p>点击按钮就可以执行 <em>displayDate()</em> 函数。</p>
+
+	<button id="myBtn">点击这里</button>
+
+	<script>
+		document.getElementById("myBtn").onclick = function() {
+			displayDate()
+		};
+		function displayDate() {
+			document.getElementById("demo").innerHTML = Date();
+		}
+	</script>
+	<p id="demo"></p>
+
+</html>

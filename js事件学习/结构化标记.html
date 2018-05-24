@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>div:元素选择器；class（. ）:类选择器；id（#navsecond）：id选择器</title>
+		<style>
+			div {
+				border: 1px solid red;
+				/*width: 400px;
+				height: 200px;*/
+			}
+			
+			.blogentry {
+				font-size: 30px;
+				color: red;
+			}
+			
+			#navsecond {
+				font-size: 20px;
+				color: purple;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<b>class 属性或者 div 元素也一样。id 属性为一个元素分配一个唯一的名字。每个名字只能在被赋
+			予的页面使用一次。（例如，假如你的页面包含 id 为 content 的 div，那么另外一个 div 
+			或者其他别的元素都不能使用这个名字。相反地，class 属性可以被一遍又一遍地使用在页面中
+			（例如，页面中的五个段落都可以使用名为 "small" 或者"footnote" 的 class 名称）。
+			下面的标记将有助于阐明 id 和 class 的差异：</b>
+		<div id="navsecond">
+			<h2>HTML教程</h2>
+			<ul id="menu">
+				<li id="h"><a href="/h.asp" title="html教程">html教程</a></li>
+				<li id="x"><a href="/x.asp" title="XML教程">XML教程</a></li>
+				<li id="b"><a href="/b.asp" title="浏览器脚本">浏览器脚本</a></li>
+				<li id="s"><a href="/s.asp" title="服务器脚本">服务器脚本</a></li>
+				<li id="d"><a href="/d.asp" title="dot net教程">dot net教程</a></li>
+				<li id="m"><a href="/m.asp" title="多媒体教程">多媒体教程</a></li>
+				<li id="w"><a href="/w.asp" title="建站手册">建站手册</a></li>
+			</ul>
+
+			<h2>XML教程</h2>
+			<ul>
+				<li><a href="/xml/index.asp" title="XML教程">XML</a></li>
+				<li><a href="/xsl/xsl_languages.asp" title="XSL语言">XSL</a></li>
+				... ... ... ...
+
+		</div>
+		<div id="searchform">Search form components go here. This section of the page is unique.
+		</div>
+		<div class="blogentry">
+			<h2>Today's blog post</h2>
+			<p>Blog content goes here.</p>
+			<p>Here is another paragraph of blog content.</p>
+			<p>Just as there can be many paragraphs on a page, so too there may be many entries in a blog. A blog page could use multiple instances of the class "blogentry" (or any other class).
+			</p>
+		</div>
+
+		<div class="blogentry">
+			<h2>Yesterday's blog post</h2>
+			<p>In fact, here we are inside another div of class "blogentry."
+			</p>
+			<p>They reproduce like rabbits.</p>
+			<p>If there are ten blog posts on this page, there might be ten divs of class "blogentry" as well.</p>
+		</div>
+	</body>
+
+</html>
